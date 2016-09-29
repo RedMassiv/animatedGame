@@ -15,8 +15,10 @@ public class Vertex {
 		System.out.println("v1.x= "+v1.x);
 		System.out.println("v2.x= "+v2.x);
 		System.out.println("v1= "+v1);
+		System.out.println("v1.length= "+v1.length());
+		System.out.println("v2.length= "+v2.length());
 	}
 	public String toString() {return "("+x+", "+y+")";}
-
+	public double length() {return Math.sqrt(x*x+y*y);}
 
 }
