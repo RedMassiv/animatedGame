@@ -19,6 +19,13 @@ public class Vertex {    //declare Variables
 		System.out.println("v1.length= "+v1.length());
 		System.out.println("v2.length= "+v2.length());
 		System.out.println("v3.skalarMult= "+ v3);
+		System.out.println(v1.equals(v2));
+		v2.setX(15);
+		v2.setY(76);
+		System.out.println(v1.equals(v2));
+		System.out.println();
+		System.out.println();
+		
 	}
 	public String toString() {return "("+x+", "+y+")";}  //change output layout of Method-Vertex
 	public double length() {return Math.sqrt(x*x+y*y);}  //calculate distance to (0,0)
@@ -34,5 +41,19 @@ public class Vertex {    //declare Variables
 	public void addMod(Vertex v2) {  //manipulate coordinates x & y for later use, coords were added with Vertex v2
 		x=x+v2.x;
 		y=y+v2.y;
+	}
+	
+	public void setX(double x) {this.x = x;} //Werte auf gewünschten übergabeparameter setzen
+	public void setY(double y) {this.y = y;}
+	
+	public double getX() {return x;} //
+	public double getY() {return y;}
+	
+	public boolean equals(Object thatObject){ //Funktion equals überschreiben
+		if(thatObject instanceof Vertex){  //prüfen of variable auch vom Typ vertex ist
+			Vertex that = (Vertex)thatObject;  //Variable als vertex markieren
+			return this.x==that.x && this.y==that.y; //
+		}
+		return false;
 	}
 }
