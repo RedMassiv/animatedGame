@@ -6,7 +6,7 @@ public class collatzFolge {
 		//int n = 27;  //Variable setzen
 		//System.out.println("Starte Collatz Folge mit Startwert " + n);
 		int hoherWert=0;
-		for (int i=10000000;i<1000000000;i++){
+		for (int i=1;i<1000000000;i++){
 			long n = i;  //Variable setzen
 			int schritte = 0;
 			//System.out.println("Starte Collatz Folge mit Startwert " + n);
