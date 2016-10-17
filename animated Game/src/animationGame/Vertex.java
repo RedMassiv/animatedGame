@@ -37,7 +37,19 @@ public class Vertex {    //declare Variables
 		}
 		return false;
 	}
-	
-	
-	
+	public Vertex sub(Vertex v2){
+		double xx=v2.x-this.x;
+		double yy=v2.y-this.y;
+		return new Vertex(xx,yy);
+	}
+	public double distance(Vertex v2){
+		double xx=v2.x-this.x;
+		double yy=v2.y-this.y;
+		return Math.sqrt(xx*xx+yy*yy);
+	}
+	public Vertex normalized(Vertex v2){
+		double teiler= v2.length();
+		Vertex normalizedvertex = new Vertex(v2.x/teiler, v2.y/teiler);
+		return normalizedvertex;
+	}
 }
